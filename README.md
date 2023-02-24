@@ -1,126 +1,47 @@
-<br />
-<p align="center">
-  <img src="./client/src/assets/logofont.svg" width="20%" />
+
+<p align="left">
+  Assesment Proctoring Tool.
 </p>
 
-<p align="center">
-  A straightforward framework built for automatic proctoring to create online tests, <i>effortlessly</i>.
-  <br />
-  <br />
-  <a href="#table-of-content"><b>Explore the docs »</b></a>
-  <br />
-  <br />
-  <a href="#architecture-and-design">Architecture</a>
-  &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="#demonstration">Features</a>
-  &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="#contributing">Local Setup</a>
-  <br />
-</p>
+### Contents
 
-<br />
-<br />
-
-<p align="center">
-  <img src="./images/landing_page.gif" alt="landing-page-gif" width="80%" />
-</p>
-
-<br />
-
-### Table Of Content
-
-- [Architecture](#architecture-and-design)
+- [Steps](#steps)
 - [Design](#design)
-- [Demonstration & Features](#demonstration)
 - [Technologies Used](#technologies-used)
-- [Local Setup & Contributing](#contributing)
-- [License](#license-)
 - [Authors](#authors)
 
-<br />
 
-### Problem we are trying to solve?
+* Problem Statement
 
-Due to Covid 19, remote learning has been a constant and so have been online examinations. 
-<br />
-But proctoring has always been a task and cheating and unfair practices have always been a problem.
-<br />
+eLitmus is a recruitment and assessment company that conducts tests across the globe. One of the most common challenges we face is preventing cheating during exams. We need your help to design and create a chrome extension to address this issue.
 
-**Problems with the exisiting sytem?**
+A Chrome extension that operates on assessment websites, activating when a user opens a test page. It opens a form for the user to enter their name, email, and test invitation code, and upon clicking the "Start Test" button, the user's information is sent to the backend server for storage. The extension performs a camera and audio check, and initiates image proctoring, sending images to the server every three minutes (configurable). All image and user activity data are stored on the backend server.
 
-The current solutions assumes to have 2 platforms 
-- One for testing purposes like Google Form for writing exams 
-- And another, video conferencing platforms like meet or zoom for manual proctoring.
-
-Our PS poses to develop an application that can automatically proctor and monitor students, without the need of manual proctoring - ie without a teacher's aid.
-
-### Market & User Research
-
-- On market research, the products available found, are paid.
-- On user research and feedback from students, UX of such platforms isn't upto the mark.
-- UX from the client's end isn't frictionless, it was expected by the client to upload questions on their platforms. 
-- The existing product doesn't seem to have an accessible Admin Dashboard.
-
+AIM to develop an application that can automatically proctor and monitor students, without the need of manual proctoring - ie without a teacher's aid.
 That's where we come into picture.
-<br />
-<br />
 
-## Architecture and Design
+## Steps
 
-The tradeoff in a Hackathon: `Speed over quality`
+* To Create the frontend of the extension using HTML, CSS, and JavaScript. You can use a JavaScript framework like React or Vue.js to simplify the development process. Create a form for the user to enter their name, email, and test invitation code. Add a "Start Test" button to the form that triggers the submission of the form data to the backend server.
+* To Add a webcam and microphone check to the extension. Use the getUserMedia API to access the user's camera and microphone and check if they are working properly. You can use a library like RecordRTC to capture video and audio data.
+* To Implement the image proctoring functionality by using a setInterval function to capture screenshots of the user's browser every three minutes (or any other configurable interval). You can use a library like html2canvas to capture screenshots.
+* To Create a backend server using a server-side programming language like Node.js or Python. Use a database like MongoDB or MySQL to store the user information and images. You can also use cloud-based storage services like Amazon S3 or Google Cloud Storage to store the images.
+* To Create a RESTful API that allows the extension to submit user information and images to the backend server. The API should store the information in the database and store the images in the cloud storage service.
+* To Create an admin dashboard that displays all the user information and stored images. You can use a web-based dashboard framework like Bootstrap or Materialize to create the dashboard.
 
-But something that we are proud of is, we tried to follow ideal software development practices.
 
-- Architecture
-- Design
-- Code
-<br />
+* Architecture
 
-The presentation for Aankh can be found [here](https://docs.google.com/presentation/d/1h3WqCwEhf5xG7TsZ-yNuDoE9ybbFiaAMEsltQ3KrLEc/edit?usp=sharing).
-
-### Architecture
-
-- The architecture and workflow was built using [excalidraw](https://excalidraw.com) and it is freaking [brilliant](https://github.com/excalidraw/excalidraw).
-<br />
-<img src="./images/architecture.svg" />
-<br />
+- The architecture and workflow was built using [excalidraw](https://excalidraw.com).
 
 ### Design
 
 - The designs were built using [Figma](figma.com) and were brought to life with [React](https://beta.reactjs.org).
-- [Design Link](https://www.figma.com/file/pbuXQGcgFpsi2lgEbtllXf/aankh)
-
-<br />
-  <img src="./images/all_designs.svg" />
-<br />
-
-## Demonstration
-
-<br />
-
-**Landing Page**
-
-<p align="left">
-  <img src='./images/landing_1.png' alt='Intro Screen' width="80%">
-  <img src='./images/landing_2.png' alt='Features' width="80%">
-  <img src='./images/landing_3.png' alt='Features 2' width="80%">
-</p>
-
-<br />
-<br />
 
 **Register & Login**
 <br />
 
 <table>
-    <tr>
-        <td>
-            <img src='./images/register.png' alt='REGISTER'>
-        </td>
-        <td>
-            <img src='./images/login.png' alt='LOGIN'>
-        </td>
-    </tr>
     <tr>
         <td>
           <p>User Registration - Face Verifacation to be done when exam starts.</p>
@@ -131,21 +52,13 @@ The presentation for Aankh can be found [here](https://docs.google.com/presentat
     </tr>
 </table>
 
-<br />
+
 
 **Creating a Test and Dashbaord**
 
 <br />
 
 <table>
-    <tr>
-        <td>
-            <img src='./images/create.png' alt='Create Test'>
-        </td>
-        <td>
-            <img src='./images/dashboard.png' alt='Dashboard'>
-        </td>
-    </tr>
     <tr>
         <td>
           <p>Creating a test and expecting a Google/Microsoft Form Link</p>
@@ -156,8 +69,6 @@ The presentation for Aankh can be found [here](https://docs.google.com/presentat
     </tr>
 </table>
 
-<br />
-
 **Start Exam**
 
 - After logging in and entering the unique test code.
@@ -165,58 +76,15 @@ The presentation for Aankh can be found [here](https://docs.google.com/presentat
   -  Face Verification
   -  Face Cover/Visibility
   -  Multiple People Detection
-<br />
 
-<img src='./images/exam.png' alt='Start Exam' width="80%">
-<br />
-
-**Building a chrome extension for track of tabs**
-
-<img src="https://user-images.githubusercontent.com/61280281/150633013-63494d63-13fd-4d97-8bed-b0700551cbe8.jpg" width="40%" />
-
-<br />
 
 **Checks for cheating**
 
 - Face Verification
 - Voice Detection
-- Multiple People Detection
-- Dev Tools Check
 - Multiple Tabs Check
 - Full Screen Check
 
-<br />
-
-<table>
-    <tr>
-        <td>
-            <img src='./images/test_response_1.png' alt='Full Screen Detect'>
-        </td>
-        <td>
-            <img src='./images/test_response_2.png' alt='Dev Tools'>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <img src='./images/test_response_3.png' alt='Face Not Visible'>
-        </td>
-        <td>
-            <img src='./images/test_response_4.png' alt='Multiple People'>
-        </td>
-    </tr>
-</table>
-
-<br />
-
-Also, **ideas rejected**: These were rejcted due to false positives and unsurity of cheating.
-
-- Eye Tracking
-- Object detection
-- Mouse Tracking
-
-<br />
-
-<br />
 
 **Test Admin Dashboard**
 
@@ -225,14 +93,6 @@ Also, **ideas rejected**: These were rejcted due to false positives and unsurity
 <br />
 
 <table>
-    <tr>
-        <td>
-            <img src='./images/test_dashboard_1.png' alt='Test Dashboard'>
-        </td>
-        <td>
-            <img src='./images/test_dashboard_2.png' alt='Test Dashboard 2'>
-        </td>
-    </tr>
     <tr>
         <td>
           <p>Test Dashboard: Admin can see statistics - no. of students with warnings and above the threshold.</p>
@@ -248,10 +108,8 @@ Also, **ideas rejected**: These were rejcted due to false positives and unsurity
 
 ## Technologies Used
 
-<br />
 
-- Workflow and Architecture Design
-  - Excalidraw
+
 - Prototyping and Frontend Design
   - Figma
 - Frontend
@@ -262,10 +120,8 @@ Also, **ideas rejected**: These were rejcted due to false positives and unsurity
   - MongoDB
 - Machine Learning
   - OpenCV
-  - Tensorflow_hub
   - Flask
 
-<br />
 
 **Dependencies**
 
@@ -275,15 +131,7 @@ A freaking huge shoutout to:
 - [react-chartjs-2](https://www.npmjs.com/package/react-chartjs-2)
 - [chartjs](https://www.npmjs.com/package/chartjs)
 
-<br />
-<br />
-
-## Contributing
-
-**Local Setup || Project Structure**
-
-NOTE: Individual instructions can be found in respective directories.
-
+**Project Structure**
 - The project contains 4 broad directories.
 
 ```
@@ -299,7 +147,7 @@ NOTE: Individual instructions can be found in respective directories.
 - `model`: Model APIs for Machine Learning.
 - `server`: The backend for the application.
 
-<br />
+
 
 **Client**
 
@@ -327,32 +175,6 @@ component
 └───component.css
 ```
 
-<br />
-<br />
-
-**Extension**
-
-Read [this](https://github.com/tusharnankani/LeadsTracker#using-this-extension) or [this](https://github.com/dheerajdlalwani/back-to-work/#how-to-install) for a brief description for installing extensions.
-- Open new tab & type: `chrome://extensions` or `edge://extensions`.
-- Look for the Developer mode toggle & turn it on if it's not already.
-- After cloning the repository, click on `Load Unpacked` and select the `extension` directory.
-
-<br />
-<br />
-
-**Model**
-
-The complete setup can be found in the [`model` directory](./model).
-
-NOTE:
-
-- Apart from this `tensorflow` and `tensorflow_hub` should be installed .
-- The face-pose-estimation model is not final it is just a placeholder for now(will improve it as we get time).
-- How to convert javascript array for image into image tensor that part is remaining.
-
-<br />
-<br />
-
 **Server**
 
 For local setup of backend:
@@ -370,20 +192,10 @@ server
 ```
 
 <br />
-<br />
-
-### License 📜
-
-[GNU General Public License v3.0](/LICENSE)
 
 
 ### Authors
 
-- Vivek Namaye 
-  - [LinkedIn](https://www.linkedin.com/in/viveknamaye/)
-- Akshay Kanade 
-  - [LinkedIn](https://www.linkedin.com/in/akshaykanade/)
-- Tushar Nankani
-  - [Twitter](https://twitter.com/tusharnankanii) 
+- Sujit Bhalekar 
+  - [LinkedIn](https://www.linkedin.com/in/sujit-bhalekar-28bba4206/)
 
-<sub>We are Team VAT, not Value Added Tax, but Vivek, Akshay and myself, Tushar.</sub>
