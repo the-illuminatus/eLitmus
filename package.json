@@ -1,0 +1,11 @@
+{
+  "name": "aankh-main",
+  "version": "1.0.0",
+  "description": "<br /> <p align=\"center\">   <img src=\"./client/src/assets/logofont.svg\" width=\"20%\" /> </p>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sujit",
+  "license": "ISC"
+}
